@@ -7,3 +7,4 @@ find . -iname "*.py" | xargs chmod +x
 mv autoProcess.ini.sample autoProcess.ini
 pip install "guessit<2"
 pip install "subliminal<2"
+pip install QTFastStart

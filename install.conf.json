@@ -1,0 +1,34 @@
+[
+{
+    "defaults": {
+        "link": {
+            "relink": true
+        }
+    }
+},
+{
+    "clean": ["~"]
+},
+{
+    "link": {
+        "~/.tmux.conf": "tmux.conf",
+        "~/.spacemacs": "spacemacs",
+        "~/.latexmkrc": "latexmkrc",
+        "~/.Xresources": "Xresources",
+        "~/.gitconfig": "gitconfig",
+        "~/.config/fish/config.fish": {
+            "create": true,
+            "path": "config/fish/config.fish"
+        },
+        "~/.ssh/config": {
+            "create": true,
+            "path": "ssh/config"
+        }
+    }
+},
+{
+    "shell": [
+        ["git submodule update --init --recursive", "Installing submodules"]
+    ]
+}
+]

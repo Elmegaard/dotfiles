@@ -1,0 +1,4 @@
+Host server
+    HostName server.elme.dk
+    Port 2001
+    User elmegaard

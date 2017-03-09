@@ -1,0 +1,106 @@
+!!! COLORS !!!
+!*.foreground:			#857d59
+!urxvt*colorBD:			#746c48
+!*.background:   		#1a1a1a
+!urxvt*borderColor:		#1a1a1a
+!*.cursorColor:  		#746c48
+!*.cursorColor2:  		#1a1a1a
+!
+!! black
+!*.color0:       		#392925
+!*.color8:       		#544b2e
+!! red
+!*.color1:       		#98724c
+!*.color9:       		#af652f
+!! green
+!*.color2:       		#908f32
+!*.color10:      		#c3c13d
+!! yellow
+!*.color3:       		#aa964c
+!*.color11:      		#c8b55b
+!! blue
+!*.color4:       		#7b854e
+!*.color12:      		#99ac43
+!! magenta
+!*.color5:       		#6b5644
+!*.color13:      		#98724c
+!! cyan
+!*.color6:       		#5c5142
+!*.color14:      		#778725
+!! white
+!*.color7:       		#c8b55b
+!*.color15:      		#e4dc8c
+!
+!!!! FONTS !!!
+!Xft.dpi:			136
+!Xft.antialias:			true
+!Xft.rgba:			rgb
+!Xft.autohint:			false
+!Xft.hinting:			true
+!Xft.hintstyle:			hintfull
+!urxvt*font:                 	xft:Source Code Pro:regular:size=5.5
+!urxvt*imFont:               	xft:Source Code Pro:regular:size=5.5
+!urxvt*boldFont:             	xft:Source Code Pro:semibold:size=5.5
+!urxvt*italicFont:           	xft:Source Code Pro:italic:size=5.5
+!urxvt*boldItalicFont:       	xft:Source Code Pro:semibold:italic:size=5.5
+!urxvt*letterSpace:		0
+!
+!!!! OPTIONS !!!
+!Xcursor.size:			6
+!urxvt*scrollBar:		false
+!urxvt*transparent:		false
+!urxvt*url-select.launcher:	chromium
+!urxvt*url-select.underline:	true
+!urxvt*cursorBlink:		false
+!
+!
+! --- xterm {{{1
+! -----------------------------------------------------------------------------
+! -- Basic settings, colors, & visuals (also fix too-dark blue)
+XTerm*termName: xterm-256color
+xterm*loginShell: true
+xterm*scrollBar: false
+xterm*background: grey7
+xterm*foreground: white
+xterm*cursorColor: grey
+xterm*cursorUnderline: true
+xterm*cursorBlink: true
+xterm*color4: DodgerBlue1
+xterm*color12: SteelBlue1
+xterm*dynamicColors: true
+xterm*saveLines: 5000
+! -- Allow utf8 in/out
+xterm*utf8: 2
+xterm*eightBitInput: true
+xtere*eightBitControl: false
+xterm*eightBitOutput: true
+! -- Enables True-Type rendering:
+xterm*renderFont: true
+xterm*faceName: DejaVuSansMono
+xterm*faceNameDoublesize: DejaVuSansMono
+xterm*wideChars: true
+xterm*wideFont: DejaVuSansMono
+! -- Define the size increments used when changing font size
+xterm*faceSize: 8
+xterm*faceSize1: 6
+xterm*faceSize2: 10
+xterm*faceSize3: 12
+xterm*faceSize4: 16
+xterm*faceSize5: 20
+xterm*faceSize6: 24
+! -- Scroll multiple lines at a time for faster redrawing:
+xterm*jumpScroll: true
+xterm*multiScroll: true
+! -- trim whitespace from selection before copying
+xterm*trimSelection: true
+!
+! Copy and paste with clipboard
+XTerm*translations: #override \
+	Ctrl Shift <KeyPress> C: copy-selection(CLIPBOARD) \n\
+	Ctrl Shift <KeyPress> V: insert-selection(CLIPBOARD)
+
+xterm*charClass: 33:48,37-38:48,45-47:48,64:48,58:48,126:48,61:48,63:48,43:48,35:48
+! map the tab key to escape in xterm (becase we can!)
+! xterm.vt100.translations: #override\n\
+!        <Key>Tab: string("\033")\n\
+
